@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import ProjectBox from "./ProjectBox"
+import ExperienceBox from "./ExperienceBox"
+import ContactSection from "./ContactSection"
+
 
 function App() {
   return (
@@ -22,6 +26,23 @@ function App() {
 
       <section id="projects">
         <h2>Projects</h2>
+        <ProjectBox
+            title={"Custom Title"}
+            tech_tags={["Python", "Java"]}
+            img_url={"https://picsum.photos/200/300"}
+        />
+      </section>
+
+      <section id="experiences">
+          <h2>Experiences</h2>
+          <ExperienceBox
+              employer={"Apple Inc."}
+              position={"Back-end Developer"}
+              time_period={"June 1, 2022 - June 1, 2023"}
+              description="Some random description, ........"
+              tech_tags={["Python", "Ruby"]}
+              link={"https://www.apple.com/"}
+          />
       </section>
 
       <section id="resume">
@@ -29,7 +50,7 @@ function App() {
       </section>
 
       <section id="contact">
-        <h2>Contact</h2>
+        <ContactSection/>
       </section>
 
       <footer>

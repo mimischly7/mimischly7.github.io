@@ -67,8 +67,8 @@ h1, h2 {
   text-align: center;
 }
 
-#projects, #resume, #contact {
-  max-width: 800px;
+#projects, #resume, #contact, #experiences {
+  max-width: 1000px;
   margin: auto;
 }
 
