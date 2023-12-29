@@ -1,0 +1,45 @@
+/* Contact Section Styles */
+#contact {
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px; /* Adjust width as needed */
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#contact h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item h3 {
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 5px;
+}
+
+.contact-item p,
+.contact-item address {
+    font-size: 1em;
+    color: #555; /* Darker text color for readability */
+    line-height: 1.5;
+}
+
+.contact-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+address {
+    font-style: normal; /* Removes default italic style of address */
+    white-space: pre-line; /* Ensures proper line breaks */
+}
