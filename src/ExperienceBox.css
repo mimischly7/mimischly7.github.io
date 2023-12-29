@@ -1,0 +1,64 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Article (Job Experience) Styles */
+.job {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.job header h3 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.job header p {
+    font-style: italic;
+    color: #666;
+}
+
+/* Description and Tech Tags */
+.job p {
+    margin: 15px 0;
+}
+
+.tech-tags {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tech-tags li {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+/* GitHub Link */
+.github-link {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.github-link:hover {
+    background: #555;
+}
+
+.fa-github {
+    margin-right: 5px;
+}
