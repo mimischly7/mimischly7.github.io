@@ -19,6 +19,18 @@ function App() {
         </nav>
       </header>
 
+        <div className="social-sidebar">
+            <a href="https://github.com/yourusername" target="_blank">
+                <i className="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank">
+                <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/yourusername" target="_blank">
+                <i className="fab fa-instagram"></i>
+            </a>
+        </div>
+
       <section id="home">
         <h1>Welcome to My Personal Website</h1>
         <p>I'm Mimis, a dedicated and passionate developer...</p>
