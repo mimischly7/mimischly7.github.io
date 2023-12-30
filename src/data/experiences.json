@@ -1,0 +1,22 @@
+[
+  {"employer":"Apple Inc.",
+  "position":"Back-end Developer",
+  "time_period":"June 1, 2022 - June 1, 2023",
+  "description":"Some random description, ........",
+  "tech_tags":["Python", "Ruby"],
+  "link":"https://www.apple.com/"},
+
+  {"employer":"Google Inc.",
+    "position":"Back-end Developer",
+    "time_period":"June 1, 2022 - June 1, 2023",
+    "description":"Some random description, ........",
+    "tech_tags":["Python", "Java"],
+    "link":"https://www.apple.com/"},
+
+  {"employer":"FB Inc.",
+    "position":"Back-end Developer",
+    "time_period":"June 1, 2022 - June 1, 2023",
+    "description":"Some random description, ........",
+    "tech_tags":["Python", "Ruby"],
+    "link":"https://www.apple.com/"}
+]

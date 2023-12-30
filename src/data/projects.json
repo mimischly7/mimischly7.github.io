@@ -1,0 +1,29 @@
+[
+  {
+    "title":"Chess AI",
+    "tech_tags":["Python", "Java"],
+    "description": ".......",
+    "img_url":"www.some-url.com"
+  },
+
+  {
+    "title":"Basketball AI",
+    "tech_tags":["Python", "Java"],
+    "description": ".......",
+    "img_url":"www.some-url.com"
+  },
+
+  {
+    "title":"Football AI",
+    "tech_tags":["Python", "Ruby"],
+    "description": ".......",
+    "img_url":"www.some-url.com"
+  },
+
+  {
+    "title":"Checkers AI",
+    "tech_tags":["Python", "Java"],
+    "description": ".......",
+    "img_url":"www.some-url.com"
+  }
+]

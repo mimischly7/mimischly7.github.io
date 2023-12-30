@@ -4,6 +4,12 @@ import ProjectBox from "./ProjectBox"
 import ExperienceBox from "./ExperienceBox"
 import ContactSection from "./ContactSection"
 
+// data
+import contact_json from './data/contact.json'
+import projects_json from './data/projects.json'
+import experiences_json from './data/experiences.json'
+
+
 
 function App() {
   return (
@@ -38,23 +44,30 @@ function App() {
 
       <section id="projects">
         <h2>Projects</h2>
-        <ProjectBox
-            title={"Custom Title"}
-            tech_tags={["Python", "Java"]}
-            img_url={"https://picsum.photos/200/300"}
-        />
+
+          {projects_json.map((proj) =>
+              <ProjectBox
+                  title={proj.title}
+                  tech_tags={proj.tech_tags}
+                  description={proj.description}
+                  img_url={proj.img_url}
+              />
+          )}
       </section>
 
       <section id="experiences">
           <h2>Experiences</h2>
-          <ExperienceBox
-              employer={"Apple Inc."}
-              position={"Back-end Developer"}
-              time_period={"June 1, 2022 - June 1, 2023"}
-              description="Some random description, ........"
-              tech_tags={["Python", "Ruby"]}
-              link={"https://www.apple.com/"}
-          />
+
+          {experiences_json.map((exp) =>
+              <ExperienceBox
+                  employer={exp.employer}
+                  position={exp.position}
+                  time_period={exp.time_period}
+                  description={exp.description}
+                  tech_tags={exp.tech_tags}
+                  link={exp.link}
+              />
+          )}
       </section>
 
       <section id="resume">
@@ -62,14 +75,20 @@ function App() {
       </section>
 
       <section id="contact">
-        <ContactSection/>
+        <ContactSection
+            email={contact_json.email}
+            phone_number={contact_json.phone_number}
+            github_link={contact_json.github_link}
+            linked_in_link={contact_json.linked_in_link}
+            address={contact_json.address}
+        />
       </section>
 
       <footer>
         <p>&copy; 2023 Dimitrios Chlympatsos. All rights reserved.</p>
       </footer>
 
-      <script src="script.js"></script>
+      {/*<script src="script.js"></script>*/}
     </div>
   );
 }
