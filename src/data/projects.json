@@ -1,29 +1,18 @@
 [
   {
-    "title":"Chess AI",
-    "tech_tags":["Python", "Java"],
-    "description": ".......",
-    "img_url":"www.some-url.com"
-  },
-
-  {
-    "title":"Basketball AI",
-    "tech_tags":["Python", "Java"],
-    "description": ".......",
-    "img_url":"www.some-url.com"
-  },
-
-  {
-    "title":"Football AI",
-    "tech_tags":["Python", "Ruby"],
-    "description": ".......",
-    "img_url":"www.some-url.com"
-  },
-
-  {
     "title":"Checkers AI",
-    "tech_tags":["Python", "Java"],
-    "description": ".......",
-    "img_url":"www.some-url.com"
+    "tech_tags":["Python", "PyGame"],
+    "description": "Implemented the recursive Minimax Search Tree algorithm Python to develop an intelligent Checkers program, making it virtually unbeatable against a player making random moves. Designed a UI visualizing the choices and performance of the AI algorithm using pygame",
+    "img_path":"/images/projects/checkersApp.png",
+    "link": "..."
+  },
+
+  {
+    "title":"Wealth & Wellbeing - Research Paper",
+    "tech_tags":["Python", "Pandas", "matplotlib"],
+    "description": "Utilized Python pandas and statistical analysis to produce a research paper on the relationship between wealth and well-being.",
+    "img_path":"/images/projects/wealth_wellbeing_paper.png",
+    "link": "https://drive.google.com/file/d/1YwTA5c6Hu78ifq-XKH1ONNxdyAmg-DMc/view"
   }
+
 ]
