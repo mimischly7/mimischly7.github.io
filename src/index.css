@@ -90,33 +90,3 @@ footer {
   }
 }
 
-.social-sidebar {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 0 5px 5px 0; /* Rounded corners on the right */
-}
-
-.social-sidebar a {
-  color: white;
-  font-size: 24px; /* Adjust icon size as needed */
-  margin: 10px 0;
-  transition: transform 0.3s ease;
-}
-
-.social-sidebar a:hover {
-  transform: translateX(10px);
-  color: #007bff; /* Color change on hover */
-}
-
-/* Additional styling for Font Awesome icons */
-.fab {
-  display: block;
-  text-align: center;
-}

@@ -1,64 +1,70 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Article (Job Experience) Styles */
+/* Experiences Section Styles */
 .job {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    margin: 20px auto;
     padding: 20px;
-    margin-bottom: 20px;
+    max-width: 800px;
+    background-color: #f7f7f7;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .job header h3 {
-    color: #007bff;
+    color: #ebf3f5;
     margin-bottom: 5px;
 }
 
 .job header p {
-    font-style: italic;
-    color: #666;
+    font-size: 0.9em;
+    color: #becccb;
 }
 
-/* Description and Tech Tags */
 .job p {
-    margin: 15px 0;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 10px;
 }
 
+/* Reuse the .tech-tags class from projects for consistency */
 .tech-tags {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 .tech-tags li {
     display: inline-block;
-    background: #007bff;
+    background-color: #2ecc71;
     color: white;
     padding: 5px 10px;
     margin: 5px;
-    border-radius: 5px;
-    font-size: 0.8em;
+    border-radius: 4px;
+    font-size: 0.9em;
 }
 
-/* GitHub Link */
 .github-link {
     display: inline-block;
-    background: #333;
-    color: white;
+    margin-top: 20px;
     padding: 10px 15px;
+    background-color: #333;
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
 }
 
 .github-link:hover {
-    background: #555;
+    background-color: #242424;
 }
 
-.fa-github {
+.fa-brands {
     margin-right: 5px;
 }
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .job {
+        padding: 15px;
+    }
+}
+
+

@@ -1,38 +1,270 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 .App {
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header and Navigation */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+/* Sections */
+section {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px !important; /* Force the margin to apply */
+}
+
+section h1, section h2 {
+  color: #2c3e50;
+}
+
+/* Home Section */
+#home {
+  background-color: #ecf0f1;
+}
+
+/*#home {*/
+/*  padding: 0 10%; !* Adjust the percentage as needed for desired spacing *!*/
+/*}*/
+
+#home {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  justify-content: space-around; /* Spreads out the flex items */
+  flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */
+  padding: 50px 5%; /* Adjust the padding as needed */
+  gap: 40px; /* Adds space between flex items */
+}
+
+#home .welcome-text {
+  flex: 3; /* Takes up 3/5 of the flex container */
+  text-align: left;
+  padding-right: 20px; /* Adds some space between the text and the image */
+}
+
+#home .welcome-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #2c3e50;
+}
+
+#home .welcome-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.5em; /* Space between paragraphs */
+}
+
+#home .profile-picture {
+  flex: 2; /* Takes up 2/5 of the flex container */
+  max-width: 300px; /* Maximum size of the image */
+  max-height: 400px;
+  border-radius: 50%; /* Makes the image round */
+  overflow: hidden; /* Ensures the image doesn't overflow its container */
+}
+
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    padding: 20px;
+  }
+
+  #home .welcome-text {
+    padding-right: 0; /* Remove padding on smaller screens */
+    order: 2; /* Text comes after the image */
+  }
+
+  #home .profile-picture {
+    max-width: 200px; /* Smaller image on smaller screens */
+    order: 1; /* Image comes before the text */
+    margin-bottom: 20px; /* Space between the image and text */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+
+/* Projects Section */
+#projects {
+  /* Additional styles for project section */
+}
+
+/* Experiences Section */
+#experiences {
+  /* Additional styles for experiences section */
+}
+
+/* Resume Section */
+#resume {
+  /* Additional styles for resume section */
+}
+
+/* Contact Section */
+#contact {
+  /* Additional styles for contact section */
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+/* Social Sidebar */
+.social-sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #2c3e50;
+  padding: 12px;
+  border-radius: 0 30px 30px 0; /* Rounded corners on the right */
+}
+
+.social-sidebar a {
   color: white;
+  font-size: 24px; /* Adjust icon size as needed */
+  margin: 10px 0;
+  transition: transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.social-sidebar a:hover {
+  transform: translateX(10px);
+  color: #007bff; /* Color change on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Additional styling for Font Awesome icons */
+.fab {
+  display: block;
+  text-align: center;
 }
+
+
+
+.code-style {
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+
+
+
+
+/*#home {*/
+/*  padding: 0 10%; !* Adjust the percentage as needed for desired spacing *!*/
+/*  margin: auto; !* Centers the section *!*/
+/*  max-width: 800px; !* Maximum width of the content for readability *!*/
+/*}*/
+
+/*#home h1 {*/
+/*  font-size: 2.5em; !* Larger font size for the main heading *!*/
+/*  margin-bottom: 0.5em; !* Space below the heading *!*/
+/*  color: #2c3e50; !* Dark color for contrast *!*/
+/*}*/
+
+/*#home p {*/
+/*  font-size: 1em; !* Standard font size for paragraph *!*/
+/*  line-height: 1.6; !* Increased line height for readability *!*/
+/*  text-align: justify; !* Justify text for a clean look *!*/
+/*  margin-bottom: 1.5em; !* Space between paragraphs *!*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*  #home {*/
+/*    padding: 0 5%; !* Less padding on smaller screens *!*/
+/*  }*/
+/*  #home h1 {*/
+/*    font-size: 2em; !* Slightly smaller font size for the heading on small screens *!*/
+/*  }*/
+/*}*/
+
+
+
+
+
+
+
+
+
+/* ALTERNATIVE WELCOME TEXT STYLING
+ */
+
+/*.welcome-text {*/
+/*  max-width: 1000px; !* or your preferred width *!*/
+/*  margin: 0 auto; !* Centers the text block *!*/
+/*  padding: 20px; !* Adds some padding around the text *!*/
+/*  text-align: left; !* Aligns text to the left *!*/
+/*  background: #ffffff; !* or any color that matches your design *!*/
+/*  border-radius: 10px; !* Optional: adds rounded corners *!*/
+/*  box-shadow: 0 4px 8px rgba(0,0,0,0.1); !* Optional: adds a subtle shadow for depth *!*/
+/*}*/
+
+/*.welcome-text h1 {*/
+/*  color: #2c3e50; !* A dark shade for the title for contrast *!*/
+/*  font-size: 2.5rem; !* Large font size for the title *!*/
+/*  font-weight: 300; !* Lighter font weight can look more modern *!*/
+/*  margin-bottom: 1rem; !* Space below the title *!*/
+/*  text-transform: uppercase; !* Optional: makes the title uppercase *!*/
+/*  letter-spacing: 1.5px; !* Optional: spaces out the letters slightly *!*/
+/*}*/
+
+/*.welcome-text p {*/
+/*  color: #666; !* A softer shade for the body text *!*/
+/*  font-size: 1rem; !* Standard font size for paragraph text *!*/
+/*  line-height: 1.6; !* Spacing between lines for readability *!*/
+/*  margin-bottom: 1rem; !* Space between paragraphs *!*/
+/*  text-align: justify; !* Justifies the text for clean edges *!*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*  .welcome-text {*/
+/*    padding: 20px 10px; !* Smaller padding on smaller screens *!*/
+/*    box-shadow: none; !* Optional: removes shadow on smaller screens *!*/
+/*  }*/
+
+/*  .welcome-text h1 {*/
+/*    font-size: 2rem; !* Slightly smaller font size for the heading on small screens *!*/
+/*  }*/
+
+/*  .welcome-text p {*/
+/*    font-size: 0.9rem; !* Slightly smaller font size for text on small screens *!*/
+/*  }*/
+/*}*/
+

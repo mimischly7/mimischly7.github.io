@@ -1,45 +1,56 @@
 /* Contact Section Styles */
 #contact {
-    background-color: #f2f2f2; /* Light grey background */
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px; /* Adjust width as needed */
-    margin: 20px auto;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 40px 0;
+    background-color: #ecf0f1;
 }
 
 #contact h2 {
-    color: #333;
-    text-align: center;
+    color: #2c3e50;
     margin-bottom: 30px;
 }
 
 .contact-item {
-    margin-bottom: 20px;
+    margin: 10px auto;
+    padding: 15px;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
 }
 
 .contact-item h3 {
-    color: #007bff; /* Blue color for headings */
-    margin-bottom: 5px;
+    color: #34495e;
+    margin-bottom: 10px;
 }
 
 .contact-item p,
 .contact-item address {
-    font-size: 1em;
-    color: #555; /* Darker text color for readability */
-    line-height: 1.5;
+    margin: 5px 0;
+    line-height: 1.6;
+    color: #555;
 }
 
 .contact-item a {
-    color: #007bff;
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .contact-item a:hover {
-    text-decoration: underline;
+    background-color: #2980b9;
 }
 
-address {
-    font-style: normal; /* Removes default italic style of address */
-    white-space: pre-line; /* Ensures proper line breaks */
+/* You can reuse the same responsive design media query */
+@media (max-width: 768px) {
+    .contact-item {
+        padding: 15px;
+    }
 }
+
+
+
