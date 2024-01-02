@@ -1,9 +1,12 @@
 import "./ProjectBox.css"
+import CodeFontStyler from "./CodeFontStyler";
+
 const ProjectBox = (props) => {
     const title = props.title;
     const tech_tags = props.tech_tags;
     const description = props.description;
-    const img_url = props.img_url;
+    const img_path = props.img_path;
+    const link = props.link;
 
     return (
         <div className="project-container">
@@ -12,11 +15,11 @@ const ProjectBox = (props) => {
                 {tech_tags.map((tag) => <li> {tag} </li>)}
             </ul>
             <div className="project-description">
-                {description}
+                <CodeFontStyler text={description}/>
             </div>
-            <img className="project-visual" src="/images/proj1.jpeg" alt="Project Visual"
-                 style={{ width: '600px'}}></img>
-            <a href="link-to-your-project-details.html" className="details-button">Learn More</a>
+            <img className="project-visual" src={img_path} alt="Project Visual"
+                 style={{ width: '450px'}}></img>
+            <a href={link} className="details-button">Learn More</a>
         </div>
     );
 }
