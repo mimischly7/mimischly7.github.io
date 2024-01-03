@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+## Where is my data?
+Where is all the information about my biography, projects, experiences,
+e.t.c. that are visible on my website actually stored? I have made a 
+`data` directory in `src` that contains `JSON` files with all the needed data
+(`projects.json`, `experiences.json`, ...). A component that needs data from one
+of these files *imports* the `JSON` file (e.g. `import contact_json from './data/contact.json'`) and
+can then use its content as a typical JavaScript object.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+What this achieves is the decoupling of application data from UI code. Specifically, it allows us
+to separate concrete business data (such as information on projects) from html code.
 
-## Available Scripts
+## Adding `code` fonts to text
+Say you have a description of your project, which says "I used Python for the backend 
+and React for the frontend to predict stock prices".
+It would be nice if the words Python and React had a nice code-like font, so the text would like
+"I used `Python` for the backend and `React` for the frontend to predict stock prices".
 
-In the project directory, you can run:
+In html, you write in-line code (i.e. have text look like code) by enclosing the required text
+in a `<code>` tag. For example, you can have `<code class="my-cass"> Python </code>`, where `my-class`
+is used by css to further style your code.
 
-### `npm start`
+Now, in my json files, text is in string format. So what can I do in my components (which receive
+these strings) to style code segments as needed?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Failed Attempt
+My first thought was to get the entire string, and for every substring that matches one of the 
+designated keywords (e.g. "Python", "Java", ...), replace it with a `<code>` enclosure of that substring.
+This was easy to do (JavaScript even has a replaceAll method for strings).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*Here's the problem*:
+XSS (cross-site-scripting) is a security vulnerability -a type of injection- where hackers can inject
+malicious scripts in html code.
+Check https://stackoverflow.com/questions/33644499/what-does-it-mean-when-they-say-react-is-xss-protected
+for more info.
 
-### `npm test`
+ReactJS is said to be XSS-protected because it takes many measures to prevers XSS-attacks,
+one of which (the reason why this attempt fails) is **escaping string variables in views**.
+If you are returning the string `"Hey <b> Alex </b>"` in your *component*, React will automatically
+**escape** the characters, so when the code actually gets rendered into html, the `<b>` tag will have
+been escaped, and it will have no effect.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clearly then, it is not possible to simply replace all keyword substrings with `<code>...<code>` of that
+substring, since the tag will be escaped. Now what?
 
-### `npm run build`
+### Solution
+Idea: Turn the string into an array of substrings (split based on the keyword) and convert
+each keyword-substring array elements into the desired components (`<code>` in our case). Then
+the component returns that array (or a `<div>` enclosure of that array if you want a single DOM element).
+1. Split the string into an array based on the designated keywords, and the array must include the keyword.
+So, given that the designated keywords are `["Python", "Java"]`, the string `"I used Python there"` will 
+lead to `["I used ", "Python", " there"]`.
+2. For each element of the array (created in step 1) that is a keyword, enclose it with 
+`<code className=...> ... </code>` using `JSX`.
+3. Return the array (or a `<div>` enclosure of that array if you want a single DOM element).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This exact strategy is implemented in the `./CodeFontStyler.js` component.
