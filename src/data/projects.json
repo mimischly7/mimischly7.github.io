@@ -4,7 +4,7 @@
     "tech_tags":["Python", "PyGame"],
     "description": "Implemented the recursive Minimax Search Tree algorithm Python to develop an intelligent Checkers program, making it virtually unbeatable against a player making random moves. Designed a UI visualizing the choices and performance of the AI algorithm using pygame",
     "img_path":"/images/projects/checkersApp.png",
-    "link": "..."
+    "link": "https://github.com/mimischly7/checkersAI?tab=readme-ov-file"
   },
 
   {
