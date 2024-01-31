@@ -1,7 +1,8 @@
 const KEYWORDS = [
     "Python", "Java", "JavaScript", "Ruby", "SQL", "Swing", "npm", "webpack",
     "Pandas", "Postgres", "MySQL", "PyGame", "HTML5", "Node", "React", "JEST",
-    "Django"]
+    "Django"
+]
 const CODE_STYLE_CLASS = "code-style";
 
 const CodeFontStyler = (props) => {

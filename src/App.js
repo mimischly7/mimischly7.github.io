@@ -86,6 +86,19 @@ function App() {
 
       <section id="resume">
         <h2>Resume</h2>
+
+          <div className="resume-container">
+              <a href="/resume_final.pdf" target="_blank" className="download-resume">View</a>
+
+              <a
+                  href="/resume_final.pdf"
+                  download="mimis-resume"
+                  className="download-resume">
+                  Download
+              </a>
+          </div>
+
+
       </section>
 
       <section id="contact">

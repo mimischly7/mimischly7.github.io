@@ -268,3 +268,43 @@ footer {
 /*  }*/
 /*}*/
 
+
+/* Resume Download Link Styles */
+.download-resume {
+  display: inline-block; /* Allows width and height */
+  padding: 10px 20px; /* Adjust as needed */
+  background-color: #3498db; /* Choose a color that fits the theme */
+  color: white; /* Text color */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Makes the text bold */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  margin: 10px auto;
+}
+
+.download-resume:hover {
+  background-color: #2980b9; /* Slightly darker shade for hover effect */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+.download-resume:active {
+  transform: translateY(1px); /* Depress on click */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reset shadow on click */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .download-resume {
+    padding: 8px 15px; /* Smaller padding on smaller screens */
+    margin: 10px;
+    font-size: 0.9em; /* Slightly smaller text on smaller screens */
+  }
+}
+
+.resume-container {
+  display: flex;
+  flex-direction: column;
+}
+
