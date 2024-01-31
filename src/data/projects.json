@@ -13,6 +13,14 @@
     "description": "Utilized Python pandas and statistical analysis to produce a research paper on the relationship between wealth and well-being.",
     "img_path":"/images/projects/wealth_wellbeing_paper.png",
     "link": "https://drive.google.com/file/d/1YwTA5c6Hu78ifq-XKH1ONNxdyAmg-DMc/view"
+  },
+
+  {
+    "title":"Fantasy Basketball Project",
+    "tech_tags":["Java", "API", "Swing", "Clean Architecture"],
+    "description": "Java-based web application enabling users to create and track custom basketball teams and compete in\nvirtual matchups, by leveraging an NBA API for dynamic data integration and real-time updates.",
+    "img_path":"/images/projects/basketball-api-image.png",
+    "link": "https://github.com/mimischly7/NBA-project"
   }
 
 ]
