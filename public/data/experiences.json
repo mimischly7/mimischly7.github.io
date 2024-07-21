@@ -1,0 +1,16 @@
+[
+  {"employer":"University of Toronto - Professor David Liu's Team SDS",
+  "position":"Full-Stack Developer",
+  "time_period":"September 2023 - June 2024",
+  "description":"Designed requested UI components with React (communicating with the back-end Ruby code), improving user experience. Collaborated effectively with my team-mates as well as worked successfully on my own, leading to swift approval of our/my pull requests. Designed JEST tests for front-end JavaScript code, ensuring the correctness of the UI. Helped maintain the Ruby back-end, including regular refactoring of the codebase, increasing the extensibility of the application.",
+  "tech_tags":["Ruby on Rails", "Docker", "React", "Postgres"],
+  "link":"https://github.com/MarkUsProject/Markus"},
+
+  {"employer":"University of Toronto - Supervised by Professor David Liu",
+    "position":"Node Developer",
+    "time_period":"May 2023 - Sep 2023",
+    "description":"Collaboratively developed a Node-based application aimed at the seamless production of visual memory models for Python objects. Studied the DOM model and HTML5 documentation, allowing me to design requested visuals. Utilized npm and webpack extensively to manage the project's dependencies and ensure seamless web integration, respectively.",
+    "tech_tags":["JavaScript", "Node", "Webpack", "npm", "Python"],
+    "link":"https://github.com/david-yz-liu/memory-models-rough"}
+
+]

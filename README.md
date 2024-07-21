@@ -54,3 +54,18 @@ lead to `["I used ", "Python", " there"]`.
 3. Return the array (or a `<div>` enclosure of that array if you want a single DOM element).
 
 This exact strategy is implemented in the `./CodeFontStyler.js` component.
+
+***
+June 11, 2024
+
+### React Router
+Client-side routing allows your app to update the URL from a link
+click without making another server request (to retrieve the html/css/js documents).
+Instead, the app can immediately render new UI and make data requests
+with `fetch` to update the page with new information (that actually
+needs to be requested from the server).
+
+Primary Components of React Router:
+1. Routers
+2. Router Matchers
+3. Navigation ("route changers")

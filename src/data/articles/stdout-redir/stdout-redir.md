@@ -1,0 +1,1 @@
+https://askubuntu.com/questions/625224/how-to-redirect-stderr-to-a-file

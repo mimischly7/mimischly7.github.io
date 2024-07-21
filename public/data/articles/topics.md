@@ -34,11 +34,3 @@
 
 
 - [ ] give deep copying solution: https://stackoverflow.com/questions/67882939/how-to-copy-object-to-new-variable
-
-
-
-
-- [ ] 
-
-- [ ] CHeck images for memory stuff:
-

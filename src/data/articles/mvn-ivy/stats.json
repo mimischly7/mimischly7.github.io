@@ -1,0 +1,6 @@
+{
+  "name" : "Some Post",
+  "dateCreated" : "June 04, 2024",
+  "summary" : "This is some summary",
+  "relatedTags" : ["python"]
+}

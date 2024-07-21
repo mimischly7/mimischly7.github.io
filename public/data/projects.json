@@ -1,0 +1,26 @@
+[
+  {
+    "title":"Checkers AI",
+    "tech_tags":["Python", "PyGame"],
+    "description": "Implemented the recursive Minimax Search Tree algorithm Python to develop an intelligent Checkers program, making it virtually unbeatable against a player making random moves. Designed a UI visualizing the choices and performance of the AI algorithm using pygame",
+    "img_path":"/images/projects/checkersApp.png",
+    "link": "https://github.com/mimischly7/checkersAI?tab=readme-ov-file"
+  },
+
+  {
+    "title":"Wealth & Wellbeing - Research Paper",
+    "tech_tags":["Python", "Pandas", "matplotlib"],
+    "description": "Utilized Python pandas and statistical analysis to produce a research paper on the relationship between wealth and well-being.",
+    "img_path":"/images/projects/wealth_wellbeing_paper.png",
+    "link": "https://drive.google.com/file/d/1YwTA5c6Hu78ifq-XKH1ONNxdyAmg-DMc/view"
+  },
+
+  {
+    "title":"Fantasy Basketball Project",
+    "tech_tags":["Java", "API", "Swing", "Clean Architecture"],
+    "description": "Java-based web application enabling users to create and track custom basketball teams and compete in\nvirtual matchups, by leveraging an NBA API for dynamic data integration and real-time updates.",
+    "img_path":"/images/projects/basketball-api-image.png",
+    "link": "https://github.com/mimischly7/NBA-project"
+  }
+
+]

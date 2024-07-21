@@ -1,0 +1,15 @@
+{
+  "title" : "Mimis Chlympatsos",
+  "paragraphs" : [
+    "I am a second-year student at the University of Toronto pursuing a Computer Science Specialist (with a Major in Mathematics), currently a software developer in Professor David Liu's team SDS. I am looking for Summer 2024 internships in Canada.",
+
+    "Graduating as Valedictorian in my high school (with a CGPA of 5.02/5.33 and a final IB score of 44/45), I was awarded the 'International Scholar Award' Scholarship to study Computer Science at the University of Toronto. Here, I am determined to strike a balance between professional growth and academic excellence.",
+
+    "I am experienced in full-stack development, having worked with various stacks including Ruby on Rails, Spring Boot, Django, and Flask on the backend, and React and Angular on the frontend. In my current position as a software developer in Professor David Liu's team SDS (Students Developing Software), I have achieved a high level of fluency in Ruby on Rails (and its interaction with the front-end, React in our stack). A project to which I have contributed significantly is 'Rough Memory Models' (https://github.com/david-yz-liu/memory-models-rough/), a Node-based project supervised by Professor David Liu aimed at the seamless production of memory-model diagrams. A project that holds a special place for me is a Checkers AI game, where I implemented the recursive Minimax Search Tree algorithm in Python to develop an intelligent Checkers program, making it virtually unbeatable against a player making random moves.",
+
+    "From an academic standpoint, I have maintained a CGPA of 3.92. Some of the most industry-applicable courses in my arsenal are CSC343 ~ on (the theory and application of) relational database management systems, CSC207 ~ on industry-standard software design principles and advanced git versioning, and CSC209 ~ on low-level programming and shell scripting."
+  ]
+
+}
+
+
