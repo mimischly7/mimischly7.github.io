@@ -9,32 +9,6 @@ import contact_json from './data/contact.json'
 import projects_json from './data/projects.json'
 import experiences_json from './data/experiences.json'
 import welcome_json from './data/welcome.json'
-import {
-    Routes,
-    Route
-} from "react-router-dom";
-
-import PostCatalog from "./PostCatalog"
-
-
-
-function App() {
-  return (
-      <div>
-          <Routes>
-              <Route
-                  path="/"
-                  element=<About />
-              />
-
-              <Route path="/posts" element=<PostCatalog/> />
-
-              <Route path="posts/:id" element=<Hey/> />
-
-          </Routes>
-      </div>
-  );
-}
 
 function About() {
     return (
@@ -112,10 +86,10 @@ function About() {
                 <h2>Resume</h2>
 
                 <div className="resume-container">
-                    <a href="/resume_final.pdf" target="_blank" className="download-resume">View</a>
+                    <a href="/data/resume_final.pdf" target="_blank" className="download-resume">View</a>
 
                     <a
-                        href="/resume_final.pdf"
+                        href="/data/resume_final.pdf"
                         download="mimis-resume"
                         className="download-resume">
                         Download
@@ -139,20 +113,10 @@ function About() {
                 <p>&copy; 2023 Dimitrios Chlympatsos. All rights reserved.</p>
             </footer>
 
-            {/*<script src="script.js"></script>*/}
         </div>
     )
 }
 
-function Hey() {
-  return (
-      <h1> Hey Brother </h1>
-  )
-}
 
-function You() {
-    return (
-        <h1> Hey You </h1>
-    )
-}
-export default App;
+
+export default About;
