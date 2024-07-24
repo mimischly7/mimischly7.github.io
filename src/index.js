@@ -18,7 +18,10 @@ const router = createBrowserRouter([
         path: "/posts",
         element: <PostCatalog/>
     },
-])
+],
+    {
+        // basename: "/" /* does not appear necessary */
+    })
 
 ReactDOM.createRoot(document.getElementById("app")).render(
     <React.StrictMode>

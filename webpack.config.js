@@ -57,6 +57,11 @@ module.exports = {
     plugins: [
         // needed to include index.html in dist
         new HtmlWebpackPlugin({
+            filename: "index.html",
+            template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({ // needed to solve gh-pages problem, see README
+            filename: "404.html",
             template: './src/index.html'
         }),
 

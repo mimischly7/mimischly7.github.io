@@ -69,3 +69,19 @@ Primary Components of React Router:
 1. Routers
 2. Router Matchers
 3. Navigation ("route changers")
+
+***
+July 23, 2024
+
+Solving the gh-pages problem:
+- My react-router setup works locally when serving my website with 
+    `serve -s dist`, because the `-s` option "rewrites" all urls that
+    could not be matched (404's) to `index.html` to be handled there,
+    where the react-router takes care of these.
+- However, when GH pages served the pushed directory (the `gh-pages` branch)
+  does not offer this "rewriting" functionality, therefore a hack is needed.
+- The hack is to have a `404.html` page in your `dist` (or `build`) directory
+    at the same level as the `index.html`, and content-wise have it be an exact
+    copy of `index.html`. This simulates the whole "rewriting" procedure and everything
+    works.
+- The `basename: "/"` in `index.js` does not appear necessary but look further into it.

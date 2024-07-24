@@ -12,7 +12,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "serve -s dist"
+    "start": "serve -s dist",
+    "deploy" : "gh-pages -d dist -b gh-pages"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
