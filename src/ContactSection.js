@@ -1,4 +1,5 @@
-import "./ContactSection.css"
+// import "./ContactSection.css"
+import "./common.css"
 
 const ContactSection = (props) => {
     const {email, phone_number, github_link, linked_in_link, address} = props;

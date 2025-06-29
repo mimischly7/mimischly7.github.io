@@ -3,6 +3,9 @@ import * as ReactDOM from 'react-dom/client';
 import './index.css';
 import About from './App';
 import PostCatalog from './PostCatalog';
+import "./common.css"
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 import {
     createBrowserRouter,

@@ -1,4 +1,5 @@
-import "./ProjectBox.css"
+import "./common.css"
+
 import CodeFontStyler from "./CodeFontStyler";
 
 const ProjectBox = (props) => {

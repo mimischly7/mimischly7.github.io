@@ -1,8 +1,10 @@
-import './App.css';
+// import './App.css';
+// import './common.css';
 import ProjectBox from "./ProjectBox"
 import ExperienceBox from "./ExperienceBox"
 import ContactSection from "./ContactSection"
 import CodeFontStyler from "./CodeFontStyler"
+import Navbar from "./Navbar.js"
 
 // data
 import contact_json from './data/contact.json'
@@ -14,38 +16,25 @@ function About() {
     return (
         <div className="App">
             <header>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="/posts">Blog</a></li>
-                    </ul>
-                </nav>
+                <Navbar/>
             </header>
 
-            <div className="social-sidebar">
-                <a href="https://github.com/mimischly7" target="_blank">
+           <div className="social-sidebar">
+                <a href="https://github.com/mimischly7" target="_blank" aria-label="GitHub">
                     <i className="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/mimischly" target="_blank">
+                <a href="https://www.linkedin.com/in/mimischly" target="_blank" aria-label="LinkedIn">
                     <i className="fab fa-linkedin-in"></i>
                 </a>
-                {/*<a href="https://www.instagram.com/yourusername" target="_blank">*/}
-                {/*    <i className="fab fa-instagram"></i>*/}
-                {/*</a>*/}
-                <a href="mailto:mimis.chlympatsos@mail.utoronto.ca" target="_blank">
+                <a href="mailto:mimis.chlympatsos@mail.utoronto.ca" target="_blank" aria-label="Email">
                     <i className="fa-solid fa-envelope"></i>
                 </a>
-
-
             </div>
 
             <section id="home">
 
                 <div className="profile-picture">
-                    <img src="/images/portrait2.jpg" alt="Mimis Chlympatsos" style={{width: "300px"}}></img>
+                    <img src="/images/portrait2.jpg" alt="Mimis Chlympatsos" style={{width: "250px"}}></img>
                 </div>
                 <div className="welcome-text">
                     <h1>{welcome_json.title}</h1>

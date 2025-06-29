@@ -1,4 +1,6 @@
-import "./ExperienceBox.css"
+// import "./ExperienceBox.css"
+import "./common.css"
+
 import CodeFontStyler from "./CodeFontStyler";
 
 /*

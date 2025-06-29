@@ -1,4 +1,6 @@
-import "./PostCatalog.css"
+// import "./PostCatalog.css"
+import "./common.css"
+
 import Navbar from "./Navbar.js"
 import Post from "./Post.js"
 
