@@ -13,7 +13,7 @@ When `sparknlp.start()` is invoked, a spark session is invoked on the background
 
 But when looking for a package, maven will first check the local `ivy` and `maven` repos for the package (and for all the dependenies of that package).
 ***
-![""](./images/error.png)
+![""](data/articles/mvn-ivy/images/error.png)
 ***
 ***
 ![""](./images/ivy-cache.png)

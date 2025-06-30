@@ -85,3 +85,14 @@ Solving the gh-pages problem:
     copy of `index.html`. This simulates the whole "rewriting" procedure and everything
     works.
 - The `basename: "/"` in `index.js` does not appear necessary but look further into it.
+
+
+*** 
+
+*June 29, 2025*
+
+### Directly Paste Post Link
+
+ Had to add `<base href="/">` to `index.html`. See https://chatgpt.com/share/6861db91-9758-8001-b921-a30b5b32b63c for more.
+
+ 

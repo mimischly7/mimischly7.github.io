@@ -5,7 +5,7 @@ import About from './App';
 import PostCatalog from './PostCatalog';
 import "./common.css"
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import {ArticleList, Post, Blog} from  "./Blog.js"
 
 import {
     createBrowserRouter,
@@ -19,12 +19,14 @@ const router = createBrowserRouter([
     },
     {
         path: "/posts",
-        element: <PostCatalog/>
-    },
-],
-    {
-        // basename: "/" /* does not appear necessary */
-    })
+        element: <Blog/>, 
+        children: [
+            { index: true, element: <ArticleList folderPath="/data/articles" /> },
+            // dynamic path resolution for individual posts
+            { path: ":slug", element: <Post basePath="/data/articles" /> }, 
+        ],
+    }
+])
 
 ReactDOM.createRoot(document.getElementById("app")).render(
     <React.StrictMode>

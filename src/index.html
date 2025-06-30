@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mimischly</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- Without this, if you have navigated to some path, and then try to directly (copy-paste) to a different path, 
+     your path will be treated as relative and appended to the current path, leading to 404. This makes all path searches 
+     absolute. See also the relevant note in README.md -->
+    <base href="/">
 </head>
 <body>
 <div id="app"></div>
