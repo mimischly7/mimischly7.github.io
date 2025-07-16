@@ -113,3 +113,9 @@ Solving the gh-pages problem:
  - [ ] Write explanation of how the website works and should be maintained in case of drought.
 
  - [ ] Fix `Blog.js` to have date, desc, ... instead of comments.
+
+ - [ ] fix styles like the button to explore more in project boxes or the awkward shading in experience boxes
+
+ - [ ] Comment and minimize css and understand it.
+
+ - [ ] Update index.json regarding blog posts
