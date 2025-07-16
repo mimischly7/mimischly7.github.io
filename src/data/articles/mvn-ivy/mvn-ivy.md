@@ -13,7 +13,8 @@ When `sparknlp.start()` is invoked, a spark session is invoked on the background
 
 But when looking for a package, maven will first check the local `ivy` and `maven` repos for the package (and for all the dependenies of that package).
 ***
-![""](data/articles/mvn-ivy/images/error.png)
+<!-- ![""](data/articles/mvn-ivy/images/error.png) -->
+![""](./images/error.png)
 ***
 ***
 ![""](./images/ivy-cache.png)
@@ -48,7 +49,15 @@ rm -rf ~/.ivy2/cache ~/.ivy2/jars ~/.m2/repository
 ```
 , which solved the problem.
 
+$2x + y = 34$
 
+
+
+$$
+x = 4y + 8y + a 
+$$
+
+The truth is that `[a,b,c]` is a variable.
 
 
 

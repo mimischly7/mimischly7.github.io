@@ -398,3 +398,259 @@ footer {
     max-width: 100%;
   }
 }
+
+
+/* For blog */
+
+/* Markdown-it Generated Content Styling */
+.markdownit-gen {
+  background: var(--box-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 6px;
+  max-width: 1100px; /*860*/
+  margin: 4rem auto;
+  padding: 2rem;
+  font-family: "Cinzel", "Times New Roman", serif;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.markdownit-gen h1,
+.markdownit-gen h2,
+.markdownit-gen h3,
+.markdownit-gen h4 {
+  color: var(--text-color);
+  margin: 2rem 0 1rem;
+  letter-spacing: 0.04em;
+}
+
+.markdownit-gen p {
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.markdownit-gen a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.markdownit-gen a:hover {
+  text-decoration: underline;
+}
+
+.markdownit-gen pre {
+  background: var(--code-bg);
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  margin: 1.5rem 0;
+}
+
+.markdownit-gen code {
+  font-family: "Fira Code", monospace;
+  background: var(--code-bg);
+  color: var(--accent-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+
+/* Remove inline code background if inside <pre> */
+.markdownit-gen pre code {
+  background: none;
+  padding: 0;
+  color: var(--text-color);
+  font-size: 0.85rem;
+}
+
+/* KaTeX equations */
+.markdownit-gen .katex {
+  font-size: 1.1rem;
+}
+
+/* Horizontal rule */
+.markdownit-gen hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2rem 0;
+}
+
+/* Lists */
+.markdownit-gen ul,
+.markdownit-gen ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+.markdownit-gen li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquotes */
+.markdownit-gen blockquote {
+  border-left: 3px solid var(--accent-color);
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.02);
+  color: var(--muted-color);
+  font-style: italic;
+}
+
+/* Images */
+.markdownit-gen img {
+  max-width: 100%;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+
+/* ---------- Post header ---------- */
+.post-header                { text-align: center; margin: 1rem auto 2rem; margin-top: 2rem }
+.post-title                 { font-size: 2.2rem; letter-spacing: 0.05em; }
+.post-date                  { margin-top: 0.3rem; font-size: 0.9rem; color: var(--muted-color); }
+
+/* ---------- Back link ---------- */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--text-color);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.back-button:hover {
+  background: var(--accent-color);
+  color: #fff;
+  transform: translateX(-4px);
+}
+
+
+
+/* =====================================================
+   ARTICLE LIST & CARD STYLES (added 2025‑07‑15)
+   ===================================================== */
+.article-list {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  list-style: none;
+}
+
+.article-card {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 1.6rem 1.8rem;
+  background: var(--box-bg);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.85);
+}
+
+.article-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+.article-title a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.article-title a:hover {
+  color: var(--accent-color);
+}
+
+.article-meta {
+  font-family: "Fira Code", monospace;
+  font-size: 0.8rem;
+  color: var(--muted-color);
+  margin-bottom: 0.8rem;
+}
+
+.article-desc {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.article-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.article-tags li {
+  background: var(--code-bg);
+  color: var(--accent-color);
+  padding: 0.18rem 0.55rem;
+  border-radius: 2px;
+  font-size: 0.7rem;
+  font-family: "Fira Code", monospace;
+  letter-spacing: 0.02em;
+}
+
+  .back-button   { margin-bottom: 1.5rem; }
+
+
+
+  /* =====================================================
+   BLOG PAGE HEADING (title + subtitle)
+   ===================================================== */
+header.blog-heading {
+  position: static;
+  text-align: center;
+  margin: 0 auto 3rem;
+  max-width: 720px;
+  backdrop-filter: none; /* removes blur */
+  box-shadow: none;      /* removes shadow */
+  background: transparent; /* optional: wipe any background tint */
+  /* display: flex; flex-direction: column; align-items: center; */
+  
+}
+.blog-title {
+  font-size: 2.4rem;
+  font-family: "Cinzel", "Times New Roman", serif;
+  letter-spacing: 0.07em;
+  color: var(--text-color);
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.blog-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--accent-color);
+  margin: 0.6rem auto 0;
+}
+
+.blog-subtitle {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  color: var(--muted-color);
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .blog-title   { font-size: 2rem; }
+  .blog-subtitle{ font-size: 0.95rem; }
+}

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useParams, Outlet } from "react-router-dom";
 import markdownit from "markdown-it";
-import markdownItMath from "markdown-it-math";
+// import markdownItMath from "markdown-it-math";
 import markdownItKatex from "markdown-it-katex";
 import hljs from "highlight.js";
+
+// import Navbar from "./Navbar.js"
+import BlogNavbar from "./BlogNavbar"
 
 import "katex/dist/katex.min.css";
 import "highlight.js/styles/github.css";
@@ -23,7 +26,7 @@ const md = markdownit({
     }
   },
 })
-  .use(markdownItMath)
+  // .use(markdownItMath)
   .use(markdownItKatex);
 
 // ------------------------
@@ -57,18 +60,66 @@ export function ArticleList({ folderPath }) {
       .catch(() => setPosts([]));
   }, [folderPath]);
 
+
+//   <ul className="article-list">
+//   {posts.map(({ slug, title, date, desc, tags }) => (
+//     <li key={slug} className="article-card">
+//       <h2 className="article-title">
+//         <Link to={`/posts/${slug}`}>{title}</Link>
+//       </h2>
+
+//       {date && <p className="article-meta">{date}</p>}
+//       {desc && <p className="article-desc">{desc}</p>}
+
+//       {!!tags?.length && (
+//         <ul className="article-tags">
+//           {tags.map(t => <li key={t}>{t}</li>)}
+//         </ul>
+//       )}
+//     </li>
+//   ))}
+// </ul>
+
   return (
     <main>
-      <h1 >Blog</h1>
-      <ul>
+      <header className="blog-heading">
+        <h1 className="blog-title">Blog</h1>
+        <h3 className="blog-subtitle">
+          This is a place where I record things I find worth recording..
+        </h3>
+      </header>
+      
+      <ul className="article-list">
         {posts.map(({ slug, title, date }) => (
-          <li key={slug}>
-            <Link to={`/posts/${slug}`}>
-              {title}
-              {console.log(title)}
-            </Link>
-            {date && <span>{date}</span>}
-          </li>
+          // <li key={slug}>
+          //   <Link to={`/posts/${slug}`}>
+          //     {title}
+          //     {console.log(title)}
+          //   </Link>
+          //   {date && <span>{date}</span>}
+          // </li>
+          <li key={slug} className="article-card">
+          <h2 className="article-title">
+            <Link to={`/posts/${slug}`}>{title}</Link>
+          </h2>
+
+          {/* {date && <p className="article-meta">{date}</p>}
+          {desc && <p className="article-desc">{desc}</p>}
+
+          {!!tags?.length && (
+            <ul className="article-tags">
+              {tags.map(t => <li key={t}>{t}</li>)}
+            </ul>
+          )} */}
+
+
+          <p className="article-meta">date</p>
+          <p className="article-desc">desc</p>
+
+            <ul className="article-tags">
+              tags
+            </ul>
+        </li>
         ))}
       </ul>
     </main>
@@ -87,7 +138,8 @@ console.log(src);
 
   // TODO: this currently does not do the job of replace relative image paths with absolute.
   const fixImgSrc = (rawHtml) =>
-    rawHtml.replace(/<img\s+([^>]*?)src=["']([^"':]+)["']([^>]*?)>/g, (_m, pre, path, post) => {
+    rawHtml.replace(
+      /<img\s+([^>]*?)src=["']([^"':]+)["']([^>]*?)>/g, (_m, pre, path, post) => {
       const full = `${basePath}/${slug}/${path}`;
       return `<img ${pre}src="${full}"${post}>`;
     });
@@ -96,8 +148,15 @@ console.log(src);
 
   return (
     <main>
-      <Link to="/">← Back</Link>
+      {/* <Link to="/posts" className="back-button">← Back</Link> */}
+
+      <header className="post-header">
+        <h1 className="post-title">{slug}</h1>
+        {"June 12 2024" && <p className="post-date">June 12 2024</p>}
+      </header>
+
       <article
+        className="markdownit-gen"
         dangerouslySetInnerHTML={{ __html: fixImgSrc(html) }}
       />
     </main>
@@ -109,7 +168,11 @@ console.log(src);
 // -------------
 export function Blog({ folderPath = "/data/articles" }) {
   return ( // need to have the `Outlet` as a placeholder
+    
     <>
+    <header>
+                <BlogNavbar/>
+            </header>
       <Outlet /> 
     </>
   );

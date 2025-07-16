@@ -1,4 +1,16 @@
 [
      { "slug": "ltc2449", "title": "My First Post", "date": "2025-06-28" },
-     { "slug": "another-post",   "title": "Another Post" }
+     { "slug": "mvn-ivy",   "title": "Another Post" , "date": "2025-06-28" },
+     { "slug": "fs-notes-stanford",   "title": "Another Post" , "date": "2025-06-28" },
+     { "slug": "ltc2449",   "title": "Another Post" , "date": "2025-06-28" },
+     { "slug": "nlp-m1",   "title": "Another Post" , "date": "2025-06-28" },
+    { "slug": "sent-udf-prob",   "title": "Another Post" , "date": "2025-06-28" },
+    { "slug": "git-soft-reset",   "title": "Another Post" , "date": "2025-06-28" },
+    { "slug": "ltc1162",   "title": "Another Post" , "date": "2025-06-28" },
+    { "slug": "ltc3185",   "title": "Another Post" , "date": "2025-06-28" },
+    { "slug": "stdout-redir",   "title": "Another Post" , "date": "2025-06-28" },
+    { "slug": "ltc1551",   "title": "Another Post" , "date": "2025-06-28" }
    ]
+
+
+

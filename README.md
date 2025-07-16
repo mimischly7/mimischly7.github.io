@@ -100,7 +100,16 @@ Solving the gh-pages problem:
  # TODO: 
 
  - [ ] Implement/fix fixImgSrc function in Blog.js to correctly replace relative image paths with absolute ones.
- - [ ] Add math support to the mardown-it logic
- - [ ] Add same style to Blog page and posts as rest of website
+
+    Just to specify imagive with relative path in md.
+
+
+ - [x] Add math support to the mardown-it logic
+
+ - [x] Add same style to Blog page and posts as rest of website
+  
  - [ ] Make information up to date
+
  - [ ] Write explanation of how the website works and should be maintained in case of drought.
+
+ - [ ] Fix `Blog.js` to have date, desc, ... instead of comments.
